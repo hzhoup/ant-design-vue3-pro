@@ -1,4 +1,4 @@
-import { ImportMetaEnv} from '@/types/vite-env'
+import { ImportMetaEnv} from '/@/types/vite-env'
 
 export function wrapperEnv(envConf: Record<string, any>) {
     const result: any = {}

@@ -1,8 +1,8 @@
 import { defineConfig, loadEnv } from 'vite'
-import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
-import {wrapperEnv} from "#/utils/helpers";
-import {createProxy} from "#/utils/proxy";
+import { wrapperEnv } from '/#/utils/helpers'
+import { createProxy } from '/#/utils/proxy'
+import { setupVitePlugin } from '/#/plugins'
 
 const root = process.cwd()
 
@@ -19,11 +19,11 @@ export default defineConfig(({ command, mode }) => {
     root,
     base: viteEnv.VITE_BASE,
     envPrefix: ['VITE_', 'APP_'],
-    plugins: [vue()],
+    plugins: setupVitePlugin(viteEnv, isBuild),
     resolve: {
       alias: {
-        '@': resolvePath('src'),
-        '#': resolvePath('build')
+        '/@': resolvePath('src'),
+        '/#': resolvePath('build')
       }
     },
     server: {
