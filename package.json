@@ -11,7 +11,8 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,vue,json,md}": "prettier --write",
-    "*.{js,jsx,ts,tsx,vue}": "eslint --fix"
+    "*.{js,jsx,ts,tsx,vue}": "eslint --fix",
+    "*.{html,vue,css,scss}": "stylelint --fix"
   },
   "dependencies": {
     "vue": "^3.2.45"
@@ -27,7 +28,18 @@
     "eslint-plugin-vue": "^9.9.0",
     "husky": "^8.0.0",
     "lint-staged": "^13.1.1",
+    "postcss": "^8.4.21",
+    "postcss-html": "^1.5.0",
+    "postcss-scss": "^4.0.6",
     "prettier": "^2.8.4",
+    "sass": "^1.58.0",
+    "stylelint": "^14.16.1",
+    "stylelint-config-prettier": "^9.0.4",
+    "stylelint-config-recommended-scss": "^8.0.0",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-config-standard-vue": "^1.0.0",
+    "stylelint-order": "^6.0.1",
+    "stylelint-scss": "^4.3.0",
     "typescript": "^4.9.3",
     "vite": "^4.1.0",
     "vue-tsc": "^1.0.24"
