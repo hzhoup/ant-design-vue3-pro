@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig, loadEnv } from 'vite'
 import { resolve } from 'path'
 import { wrapperEnv } from '/#/utils/helpers'
@@ -39,6 +40,13 @@ export default defineConfig(({ command, mode }) => {
       target: 'es2015',
       cssTarget: 'chrome80',
       chunkSizeWarningLimit: 2048
+    },
+    test: {
+      globals: true,
+      environment: 'jsdom',
+      transformMode: {
+        web: [/.[tj]sx$/]
+      }
     }
   }
 })
