@@ -23,7 +23,7 @@ export const setupUnplugin = () => {
     autoImport({
       imports: ['vue', 'vitest'],
       eslintrc: {
-        enabled: true,
+        enabled: false,
         filepath: './.eslintrc-auto-import.json',
         globalsPropValue: true
       },
