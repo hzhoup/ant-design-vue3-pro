@@ -1,0 +1,6 @@
+node_modules
+
+*.log
+
+components.d.ts
+auto-import.d.ts
