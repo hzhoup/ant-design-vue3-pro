@@ -1,5 +1,6 @@
 import App from '/@/App.vue'
 import LoadingApp from '/@/LoadApp.vue'
+import { setupRouter } from '/@/router'
 import 'uno.css'
 import { createApp } from 'vue'
 
@@ -10,9 +11,9 @@ async function bootstrap() {
 
   const app = createApp(App)
 
-  setTimeout(() => {
-    app.mount('#app')
-  }, 1000000)
+  await setupRouter(app)
+
+  app.mount('#app')
 }
 
 await bootstrap()
