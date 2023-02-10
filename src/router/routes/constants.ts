@@ -12,5 +12,10 @@ export const constantRoutes: RouteRecordRaw[] = [
     path: '/404',
     name: '404',
     component: () => import('/@/views/system/404/index.vue')
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'not-found',
+    redirect: '/404'
   }
 ]
