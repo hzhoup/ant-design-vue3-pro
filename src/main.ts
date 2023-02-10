@@ -2,10 +2,12 @@ import App from '/@/App.vue'
 import LoadingApp from '/@/LoadApp.vue'
 import { setupRouter } from '/@/router'
 import { setupStore } from '/@/stores'
-import 'uno.css'
+import { setupAssets } from '/@/styles'
 import { createApp } from 'vue'
 
 async function bootstrap() {
+  setupAssets()
+
   const loadApp = createApp(LoadingApp)
 
   loadApp.mount('#load-app')
