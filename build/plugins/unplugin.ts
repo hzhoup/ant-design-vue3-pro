@@ -2,6 +2,7 @@ import autoImport from 'unplugin-auto-import/vite'
 import { FileSystemIconLoader } from 'unplugin-icons/loaders'
 import iconsResolver from 'unplugin-icons/resolver'
 import icons from 'unplugin-icons/vite'
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import components from 'unplugin-vue-components/vite'
 import type { PluginOption } from 'vite'
 
@@ -11,6 +12,7 @@ export const setupUnplugin = () => {
   plugins.push(
     components({
       resolvers: [
+        NaiveUiResolver(),
         iconsResolver({ prefix: 'icon', alias: { park: 'icon-park-outline' }, customCollections: ['custom'] })
       ],
       dirs: ['src/components'],
@@ -21,7 +23,15 @@ export const setupUnplugin = () => {
 
   plugins.push(
     autoImport({
-      imports: ['vue', 'vue-router', 'pinia', 'vitest'],
+      imports: [
+        'vue',
+        'vue-router',
+        'pinia',
+        'vitest',
+        {
+          'naive-ui': ['useDialog', 'useMessage', 'useNotification', 'useLoadingBar']
+        }
+      ],
       eslintrc: {
         enabled: false,
         filepath: './.eslintrc-auto-import.json',
