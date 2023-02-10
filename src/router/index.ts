@@ -1,4 +1,4 @@
-import { constantRoutes } from '/@/router/constants'
+import { constantRoutes } from '/@/router/routes/constants'
 import type { App } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 

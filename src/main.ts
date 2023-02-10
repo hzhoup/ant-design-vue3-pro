@@ -1,5 +1,6 @@
 import App from '/@/App.vue'
 import LoadingApp from '/@/LoadApp.vue'
+import { setupI18n } from '/@/locales'
 import { setupRouter } from '/@/router'
 import { setupStore } from '/@/stores'
 import { setupAssets } from '/@/styles'
@@ -13,6 +14,8 @@ async function bootstrap() {
   loadApp.mount('#load-app')
 
   const app = createApp(App)
+
+  await setupI18n(app)
 
   setupStore(app)
 

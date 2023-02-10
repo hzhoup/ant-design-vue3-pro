@@ -27,9 +27,13 @@ export const setupUnplugin = () => {
         'vue',
         'vue-router',
         'pinia',
+        'vue-i18n',
         'vitest',
         {
           'naive-ui': ['useDialog', 'useMessage', 'useNotification', 'useLoadingBar']
+        },
+        {
+          '@vueuse/core': ['useDark', 'useToggle', 'useFullscreen']
         }
       ],
       eslintrc: {

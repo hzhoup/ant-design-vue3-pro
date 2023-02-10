@@ -1,9 +1,9 @@
 /// <reference types="vitest" />
-import { defineConfig, loadEnv } from 'vite'
-import { resolve } from 'path'
+import { setupVitePlugin } from '/#/plugins'
 import { wrapperEnv } from '/#/utils/helpers'
 import { createProxy } from '/#/utils/proxy'
-import { setupVitePlugin } from '/#/plugins'
+import { resolve } from 'path'
+import { defineConfig, loadEnv } from 'vite'
 
 const root = process.cwd()
 
@@ -23,6 +23,7 @@ export default defineConfig(({ command, mode }) => {
     plugins: setupVitePlugin(viteEnv, isBuild),
     resolve: {
       alias: {
+        'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js',
         '/@': resolvePath('src'),
         '/#': resolvePath('build')
       }

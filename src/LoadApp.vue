@@ -1,15 +1,15 @@
 <template>
   <div class="fixed-center flex-col">
-    <IconCustomVue class="w-24 h-24" />
-    <div class="w-56px h-56px relative animate-spin my-36px">
+    <IconCustomVue class="wh-128" />
+    <div class="w-56 h-56 relative animate-spin my-36">
       <span
         v-for="(cls, idx) in loadingClasses"
         :key="idx"
         :class="cls"
-        class="absolute w-16px h-16px bg-#1890ff rounded-8px animate-pulse"
+        class="absolute wh-16 bg-#1890FF rounded-8 animate-pulse"
       />
     </div>
-    <h2 class="text-28px font-500 text-#1890ff">Admin Pro</h2>
+    <h2 class="text-28 font-500 text-#1890FF">Admin Pro</h2>
   </div>
 </template>
 
