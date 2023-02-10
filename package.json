@@ -18,6 +18,8 @@
     "*.{html,vue,css,scss}": "stylelint --fix"
   },
   "dependencies": {
+    "pinia": "^2.0.30",
+    "pinia-plugin-persistedstate": "^3.0.2",
     "vue": "^3.2.45"
   },
   "devDependencies": {

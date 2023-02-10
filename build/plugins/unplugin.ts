@@ -21,7 +21,7 @@ export const setupUnplugin = () => {
 
   plugins.push(
     autoImport({
-      imports: ['vue', 'vue-router', 'vitest'],
+      imports: ['vue', 'vue-router', 'pinia', 'vitest'],
       eslintrc: {
         enabled: false,
         filepath: './.eslintrc-auto-import.json',
