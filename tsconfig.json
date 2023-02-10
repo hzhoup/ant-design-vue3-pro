@@ -16,7 +16,8 @@
     "paths": {
       "/@/*": ["src/*"],
       "/#/*": ["build/*"]
-    }
+    },
+    "types": ["vite/client", "node", "unplugin-vue-macros/macros-global"]
   },
   "include": [
     "src/**/*.ts",
