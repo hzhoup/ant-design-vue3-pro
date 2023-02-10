@@ -1,6 +1,8 @@
 <template>
   <n-layout-footer class="h-32">
-    <div>footer</div>
+    <DarkModeContainer class="flex-center h-full">
+      <span>Copyright ©2023 Admin Pro</span>
+    </DarkModeContainer>
   </n-layout-footer>
 </template>
 
