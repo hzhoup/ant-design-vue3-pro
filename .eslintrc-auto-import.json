@@ -17,6 +17,7 @@
     "chai": true,
     "computed": true,
     "createApp": true,
+    "createFetch": true,
     "createPinia": true,
     "customRef": true,
     "defineAsyncComponent": true,

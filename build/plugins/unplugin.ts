@@ -33,7 +33,7 @@ export const setupUnplugin = () => {
           'naive-ui': ['useDialog', 'useMessage', 'useNotification', 'useLoadingBar']
         },
         {
-          '@vueuse/core': ['useDark', 'useToggle', 'useFullscreen']
+          '@vueuse/core': ['useDark', 'useToggle', 'useFullscreen', 'createFetch']
         }
       ],
       eslintrc: {

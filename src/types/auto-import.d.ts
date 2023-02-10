@@ -11,6 +11,7 @@ declare global {
   const chai: typeof import('vitest')['chai']
   const computed: typeof import('vue')['computed']
   const createApp: typeof import('vue')['createApp']
+  const createFetch: typeof import('@vueuse/core')['createFetch']
   const createPinia: typeof import('pinia')['createPinia']
   const customRef: typeof import('vue')['customRef']
   const defineAsyncComponent: typeof import('vue')['defineAsyncComponent']

@@ -15,6 +15,8 @@ export const useAppStore = defineStore(
       locale: 'zh'
     })
 
+    const token = ref<string>()
+
     function toggleSideCollapse() {
       control.sideCollapse = !control.sideCollapse
     }
@@ -23,7 +25,7 @@ export const useAppStore = defineStore(
       control.locale = key
     }
 
-    return { ...toRefs(control), toggleSideCollapse, changeLocale }
+    return { ...toRefs(control), token, toggleSideCollapse, changeLocale }
   },
   {
     persist: true
